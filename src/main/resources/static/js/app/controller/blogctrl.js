@@ -7,7 +7,7 @@ app.controller("blogCtrl", function($scope,$log,$http) {
     
     $log.debug('se creo el $scope');
 
-     $scope.loadData = function() {
+    $scope.loadData = function() {
         $http({
             method: "GET",
             url: "blogs"
@@ -30,7 +30,7 @@ app.controller("blogCtrl", function($scope,$log,$http) {
         });
     };
     
-    $scope.processDelete = function() {
+    $scope.processDelete = function(index) {
         $log.debug($scope.entry);
         $http({
             method  : 'DELETE',

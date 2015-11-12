@@ -40,9 +40,10 @@ public class EntryController {
     }
     
     @RequestMapping(method = RequestMethod.DELETE,value = "/blog")
-    public  ResponseEntity<?>  deleteEntry() {
+    public  ResponseEntity<?>  deleteEntry(@RequestParam Integer p) {
         
         //int i = entries.indexOf(e);
+        System.out.println(p);
         entries.remove(0);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
